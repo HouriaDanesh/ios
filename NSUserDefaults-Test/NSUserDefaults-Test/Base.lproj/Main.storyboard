@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSUserDefaults_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AMV-4R-oOp">
+                                <rect key="frame" x="180" y="28" width="240" height="395"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X51-tO-K2E">
+                                        <rect key="frame" x="51" y="0.0" width="138" height="64"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="polaroid" translatesAutoresizingMaskIntoConstraints="NO" id="2Ub-84-TEs">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <animations/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="cNT-0f-j5e"/>
+                                                    <constraint firstAttribute="width" constant="64" id="h9I-I4-urX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="6Ko-dH-CW6" appends="YES" id="hIY-ol-P8a"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="XVS-TA-mTb">
+                                                <rect key="frame" x="74" y="0.0" width="64" height="64"/>
+                                                <animations/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="5L7-ac-kyl"/>
+                                                    <constraint firstAttribute="height" constant="64" id="id0-p2-Olj"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="lyj-uq-4ue" appends="YES" id="RWZ-Sn-cWu"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="2Ub-84-TEs" firstAttribute="top" secondItem="X51-tO-K2E" secondAttribute="top" id="pw1-Rs-6dJ"/>
+                                            <constraint firstItem="XVS-TA-mTb" firstAttribute="top" secondItem="X51-tO-K2E" secondAttribute="top" id="yAH-CQ-dB2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-RN-mxb">
+                                        <rect key="frame" x="0.0" y="74" width="240" height="240"/>
+                                        <animations/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bvK-DF-owV">
+                                        <rect key="frame" x="0.0" y="324" width="240" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOt-kF-en5">
+                                        <rect key="frame" x="0.0" y="364" width="240" height="31"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="wvV-o3-X19"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveUserInfo" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xex-SO-LgJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="bvK-DF-owV" firstAttribute="leading" secondItem="AMV-4R-oOp" secondAttribute="leading" id="2jR-EN-Pbg"/>
+                                    <constraint firstAttribute="trailing" secondItem="QOt-kF-en5" secondAttribute="trailing" id="9ef-Ou-VAd"/>
+                                    <constraint firstAttribute="trailing" secondItem="bvK-DF-owV" secondAttribute="trailing" id="H7t-O9-nkR"/>
+                                    <constraint firstItem="WHC-RN-mxb" firstAttribute="leading" secondItem="bvK-DF-owV" secondAttribute="leading" id="LS3-65-qEo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AMV-4R-oOp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rcg-jq-CYU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AMV-4R-oOp" secondAttribute="bottom" constant="177" id="nQ3-aA-4e5"/>
+                            <constraint firstItem="AMV-4R-oOp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="t1B-Q3-zKy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="camera" destination="XVS-TA-mTb" id="DMa-Oy-h4a"/>
+                        <outlet property="profileImage" destination="WHC-RN-mxb" id="sHr-s7-h5f"/>
+                        <outlet property="userName" destination="bvK-DF-owV" id="Ils-V2-aLJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6Ko-dH-CW6">
+                    <connections>
+                        <action selector="selectImageFromLibrary:" destination="BYZ-38-t0r" id="jBd-cy-RTk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lyj-uq-4ue">
+                    <connections>
+                        <action selector="selectImageFromCamera:" destination="BYZ-38-t0r" id="e1C-Ql-EIU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="440" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="128" height="128"/>
+        <image name="polaroid" width="128" height="128"/>
+    </resources>
+</document>
